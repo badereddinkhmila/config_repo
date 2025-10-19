@@ -1,23 +1,23 @@
-server:
-  port: 9000
+# server:
+#   port: 9000
 
-spring:
-  application:
-    name: github-config
+# spring:
+#   application:
+#     name: github-config
 
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com:badereddinkhmila/config_repo
-          clone-on-start: true
-          default-label: main
+#   cloud:
+#     config:
+#       server:
+#         git:
+#           uri: https://github.com:badereddinkhmila/config_repo
+#           clone-on-start: true
+#           default-label: main
 
-  kafka:
-    bootstrap-servers: localhost:9092
+#   kafka:
+#     bootstrap-servers: localhost:9092
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: busrefresh
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: busrefresh
