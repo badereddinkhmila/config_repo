@@ -1,0 +1,40 @@
+spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: postgres_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+          batch_size: 25
+        generate_statistics: false
+        show_sql: false
+        format_sql: true
+        use_sql_comments: false
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+        connection:
+          provider_disables_autocommit: false
+    show-sql: false
+    open-in-view: false
+
+message: "Hello PaymentMicroService from github config in dev mode"

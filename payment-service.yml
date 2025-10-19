@@ -1,0 +1,26 @@
+server:
+  port: 8010
+
+spring:
+  datasource:
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 10
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1200000
+      leak-detection-threshold: 60000
+      pool-name: SpringBootHikariCP
+      connection-test-query: SELECT 1
+      auto-commit: true
+      register-mbeans: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      properties:
+      hibernate:
+        order_inserts: true
+        order_updates: true
