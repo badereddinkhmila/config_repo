@@ -1,0 +1,16 @@
+server:
+  port: 8000
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
